@@ -1,5 +1,3 @@
-/* global OPTIONS */
-
 import Flexsearch from 'flexsearch'
 // Use when flexSearch v0.7.0 will be available
 // import cyrillicCharset from 'flexsearch/dist/lang/cyrillic/default.min.js'
@@ -110,7 +108,7 @@ export default {
 function getParentPageTitle(page) {
   const pathParts = _.drop(page.path.split('/'))
   let parentPagePath = '/'
-  const topCategoryLevel = OPTIONS.topCategoryLevel || 0
+  const topCategoryLevel = OPT_TOP_CATEGORY_LEVEL
 
   if (pathParts[topCategoryLevel]) {
     const topCategoryPath = '/' + _.chunk(pathParts, topCategoryLevel + 1)[0].join('/') + '/'

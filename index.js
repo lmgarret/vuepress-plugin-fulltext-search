@@ -50,6 +50,7 @@ module.exports = (options, ctx, globalCtx) => ({
   define() {
     return {
       OPTIONS: options,
+      OPT_TOP_CATEGORY_LEVEL: options.topCategoryLevel || 0
     }
   },
 })
